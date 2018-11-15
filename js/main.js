@@ -4,6 +4,18 @@
 //2
     let displayTerm = "";
 
+//Let's make an array for the blogpost content
+let posts = ["Man I just love making these prototypical posts, they are so very fun to make", 
+           "A squrl ran past me today, it was very eciting. Have you done anything exciting today?", 
+           "Drank some of that good water this morning, and yesterday, and the day before #stayhydrated",
+           "My owner threw a stick, I did n\'t see where it landed so I ended up just running in a circle for an hour as my owner watched.",
+           "I haven\'t seen my parents in a long time, wonder what they\'re up to",
+           "I met another dog at the park today. She is very fun, she likes to run fast, we are already best friends.",
+           "How many more of these do I have to ride Drake? How many before you\'re satisfied with my work? ", 
+           "I haven\'t seen my owner in a long long long long long long long long time, it\'s already been five minutes.",
+           "Saw a pug today, they\'re cool.",
+           "Wow I can\'t believe I wrote all that, I must be some literary genius."];
+
 //Establish globals
 let age = 0;
 let interest ="";
@@ -55,8 +67,19 @@ function jsonLoaded(obj)
     
     let day = randDate();
     document.querySelector("#column1").innerHTML = `<div class='result'><img src='${image}' title= '${displayTerm}'/> <p>${greeting[greet]} ${displayTerm}</p><p>Interests: ${interest}</p><p>Age: ${age}</p></div>`
-    document.querySelector("#column2").innerHTML = `<div class='result'><p>${day}</p></div>`
+    let content = "<div class='result'>";
+    //document.querySelector("#column2").innerHTML = `<div class='result'><p>${day}</p></div>`
     /*  */
+    for( let i =0; i<5; i++ )
+        {
+            let result = "";
+            let newDay = randDate();
+            let blogentry = posts[random(0,9)];
+            result = "<h1>" + newDay + "</h1><p>" + blogentry + "</p>";
+            content += result;
+        }
+    content += "</div>"
+    document.querySelector("#column2").innerHTML = `${content}`;
     
 }
 
