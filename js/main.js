@@ -3,7 +3,10 @@
 	
 //2
     let displayTerm = "";
-	
+
+//Establish globals
+let age = 0;
+let interest ="";
 //establish randomized blog data
 //right now we'll just have 3 random greetings
 let greeting = ["Hello there my name is ", "Greetings humans, I am ", "I am the dog known as "];
@@ -16,7 +19,8 @@ function getData()
             
             //Get the user input to display later.
             displayTerm = document.querySelector("#searchterm").value;
-            
+            age = document.querySelector("#age").value;
+            interest= document.querySelector("#interest").value;
             //make sure there's actually a term to ""search""
             if( displayTerm.length < 1 ) return; //bail out if there's no term input
             
@@ -49,8 +53,35 @@ function jsonLoaded(obj)
     let image = "https://random.dog/" + obj;
     let greet = Math.floor(Math.random() * 3); // returns number from 0 to 2
     
-    document.querySelector("#column1").innerHTML = `<div class='result'><img src='${image}' title= '${displayTerm}'/> </div>`
-    document.querySelector("#column2").innerHTML = `<div class='result'><p>${greeting[greet]} ${displayTerm}</p></div>`
+    let day = randDate();
+    document.querySelector("#column1").innerHTML = `<div class='result'><img src='${image}' title= '${displayTerm}'/> <p>${greeting[greet]} ${displayTerm}</p></div>`
+    document.querySelector("#column2").innerHTML = `<div class='result'><p>${day}</p></div>`
     /*  */
+    
+}
+
+function random(low, cieling)
+{
+    return Math.floor( (Math.random()* cieling) + low);  
+}
+
+function randDate()
+{
+    //Make an array of the months
+    var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+    //days and years are just random 
+    let monthNum = random(0, 11);
+    let day;
+    if( monthNum == 1 )//Feburary
+    {
+        day = random(1,28);
+    }
+    else
+    {
+        day = random(1,30);
+    }
+    let year = random( 2018 - age, age);
+    let fullDate = months[monthNum] + " " + day.toString() + ", " + year.toString();
+    return fullDate;
     
 }
