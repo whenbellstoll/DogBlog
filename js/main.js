@@ -21,7 +21,7 @@ function getData()
             if( displayTerm.length < 1 ) return; //bail out if there's no term input
             
             //update the UI
-            document.querySelector("#content").innerHTML = "<b>Searching for " + displayTerm + " the dog</b>";
+            document.querySelector("#column1").innerHTML = "<b>Searching for " + displayTerm + " the dog</b>";
             
             let url = DOG_URL;
             
@@ -49,6 +49,8 @@ function jsonLoaded(obj)
     let image = "https://random.dog/" + obj;
     let greet = Math.floor(Math.random() * 3); // returns number from 0 to 2
     
-    document.querySelector("#content").innerHTML = `<div class='result'><img src='${image}' title= '${displayTerm}'/> <p>${greeting[greet]} ${displayTerm} </p></div>`
+    document.querySelector("#column1").innerHTML = `<div class='result'><img src='${image}' title= '${displayTerm}'/> </div>`
+    document.querySelector("#column2").innerHTML = `<div class='result'><p>${greeting[greet]} ${displayTerm}</p></div>`
+    /*  */
     
 }
