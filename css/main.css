@@ -72,25 +72,30 @@ body p
     display: flex;
 }
 
+
 #column1 {
-    flex: 50%;
-    font-size: 16px;
+    flex: 30%;
+    font-size: 12px;
     font-family: 'KoHo', sans-serif;
     border: 1px solid black;
     border-radius: 10px;
     border-bottom: 3px solid black;
     background-color: #FFFFFE;
-    max-width: 650px;
-    min-height: 600px;
-    margin: 0px auto;
+    max-width: 450px;
     margin-top: 5px;
-    margin-bottom: 120px;
+    margin-bottom: 220px;
     text-align: center;
     padding: 25px;
     text-align: left;
 }
+#column1 p
+{
+    font-size: 20px;
+    font-family: 'KoHo', sans-serif;
+    text-align: center;
+}
 #column2{
-    flex:50%;
+    flex:65%;
     font-size: 16px;
     font-family: 'KoHo', sans-serif;
     border: 1px solid black;
@@ -114,8 +119,8 @@ body p
 
 #column1 img
 {
-    max-width:640px;
-    max-height:480px;
+    max-width:400px;
+    max-height:350px;
     margin-left: auto; 
     margin-right: auto; 
     display: block;
