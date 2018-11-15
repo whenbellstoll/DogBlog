@@ -5,9 +5,6 @@ html
 
 }
 
-div{
-    display: inline-block;
-}
 body
 {
     background: beige;
@@ -71,7 +68,7 @@ body p
     background-color: #9CAEFF;
     border-radius: 10px;
 }
-#row {
+#rows {
     display: flex;
 }
 
