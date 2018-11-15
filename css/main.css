@@ -74,6 +74,7 @@ body p
 
 
 #column1 {
+    position: fixed;
     flex: 30%;
     font-size: 12px;
     font-family: 'KoHo', sans-serif;
