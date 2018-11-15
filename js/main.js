@@ -54,7 +54,7 @@ function jsonLoaded(obj)
     let greet = Math.floor(Math.random() * 3); // returns number from 0 to 2
     
     let day = randDate();
-    document.querySelector("#column1").innerHTML = `<div class='result'><img src='${image}' title= '${displayTerm}'/> <p>${greeting[greet]} ${displayTerm}</p></div>`
+    document.querySelector("#column1").innerHTML = `<div class='result'><img src='${image}' title= '${displayTerm}'/> <p>${greeting[greet]} ${displayTerm}</p><p>Interests: ${interest}</p><p>Age: ${age}</p></div>`
     document.querySelector("#column2").innerHTML = `<div class='result'><p>${day}</p></div>`
     /*  */
     
