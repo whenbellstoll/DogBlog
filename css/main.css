@@ -31,7 +31,9 @@ body p
     margin-right: 0px;
 }
 
-
+.documentation{
+    font-size: 20px;
+}
 #menu p a
 {
     border: none;
