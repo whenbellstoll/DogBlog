@@ -157,9 +157,14 @@ footer p
         left: 0px;
         
     }
+    #rows{
+        display: block;
+    }
     #column1
     {
-        max-width: 10%;
+        position: relative;
+        margin: 0px auto;
+        min-width: inherit;
     }
     #column1 img
     {
